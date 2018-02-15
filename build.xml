@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project name="test" default="info"  basedir=".">
+
+   <target name="create">
+      <mkdir dir="d1"/>
+       <mkdir  dir="d2"/>
+   </target>
+        <target name="delete" depends="create">
+        <delete dir="d1"/>
+        <delete dir="d2"/>
+   </target>
+        <target name="info" depends="delete">
+        <echo>Hello World </echo>
+        </target>
+
+</project>
